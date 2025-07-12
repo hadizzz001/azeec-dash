@@ -7,23 +7,9 @@ export async function PATCH(request, { params }) {
   const { id } = params;
   const {
     title,
-    description,
-    price,
-    discount,
+    description, 
     img,
-    category, 
-    stock,
-    arrival ,
-    color ,
-    type ,
-      origin       ,
-  weight       ,
-  profit       ,
-  rate         ,
-  shippingCost ,
-  landing      ,
-  profitAmount ,
-  date        ,
+    category,  
      
   } = await request.json();
 
@@ -35,24 +21,10 @@ export async function PATCH(request, { params }) {
     const updatedProduct = await prisma.product.update({
       where: { id },
       data: {
-        title,
-        description,
-        price,
-        discount,
-        img,
-        category, 
-        stock,
-        arrival ,
-        color ,
-        type ,
-          origin       ,
-  weight       ,
-  profit       ,
-  rate         ,
-  shippingCost ,
-  landing      ,
-  profitAmount ,
-  date        ,
+    title,
+    description, 
+    img,
+    category,  
          
       },
     });

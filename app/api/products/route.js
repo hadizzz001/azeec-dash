@@ -6,24 +6,10 @@ export async function POST(req) {
   try {
     const body = await req.json();
     const {
-      title,
-      description,
-      price,
-      discount,
-      img,
-      category,
-      stock,
-      arrival,
-      color,
-      type,
-      origin,
-      weight,
-      profit,
-      rate,
-      shippingCost,
-      landing,
-      profitAmount,
-      date,
+    title,
+    description, 
+    img,
+    category,  
     } = body;
 
     console.log("body are: ", body);
@@ -32,24 +18,10 @@ export async function POST(req) {
 
     const product = await prisma.product.create({
       data: {
-        title,
-        description,
-        price,
-        discount,
-        img,
-        category,
-        stock,
-        arrival,
-        color,
-        type,
-        origin,
-        weight,
-        profit,
-        rate,
-        shippingCost,
-        landing,
-        profitAmount,
-        date,
+    title,
+    description, 
+    img,
+    category,  
 
       },
     });

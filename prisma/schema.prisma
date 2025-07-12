@@ -10,23 +10,9 @@ datasource db {
 model Product {
   id           String   @id @default(auto()) @map("_id") @db.ObjectId
   title        String
-  description  String
-  price        String
-  discount     String
+  description  String 
   img          String[]
-  category     String
-  stock        String?
-  origin       Float?
-  weight       Float?
-  profit       Float?
-  rate         Float?
-  shippingCost Float?
-  landing      Float?
-  profitAmount Float?
-  date         String?
-  color        Json?
-  type         String
-  arrival      String   @default("no")
+  category     String 
 }
 
 model Category {
@@ -35,26 +21,7 @@ model Category {
   img  String[]
 }
 
-model Offer {
-  id   String @id @default(auto()) @map("_id") @db.ObjectId
-  code String
-  per  Int
-}
-
-model Order {
-  id          String  @id @default(auto()) @map("_id") @db.ObjectId
-  oid         Int     @unique
-  userInfo    Json
-  cartItems   Json
-  total       String
-  delivery    String
-  code        String?
-  paid        Boolean @default(false)
-  num         String?
-  remark      String?
-  fulfillment Boolean @default(false)
-  date        String
-}
+ 
 
 model Review {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
