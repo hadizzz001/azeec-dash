@@ -45,15 +45,10 @@ export default function Sidebar() {
               </a>
             </li>    
             <li>
-              <a href="/offer" style={{ color: "white", textDecoration: "none" }}>
-                Add Code
+              <a href="/brand" style={{ color: "white", textDecoration: "none" }}>
+                Add Brand
               </a>
-            </li>  
-            <li>
-              <a href="/reservation" style={{ color: "white", textDecoration: "none" }}>
-                Orders
-              </a>
-            </li> 
+            </li>   
             <li>
               <a href="/" style={{ color: "white", textDecoration: "none" }}>
                 Logout

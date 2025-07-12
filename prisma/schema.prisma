@@ -29,3 +29,9 @@ model Review {
   description String
   date        DateTime @default(now()) @db.Date
 }
+
+
+model Brand {
+  id   String   @id @default(auto()) @map("_id") @db.ObjectId 
+  img  String[]
+}
