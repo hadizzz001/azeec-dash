@@ -136,7 +136,8 @@ export default function AddProduct() {
         placeholder="Write your product description here..."
       />
 
-      <Upload onFilesUpload={handleImgChange} />Max 12 images
+      <Upload onFilesUpload={handleImgChange} /> 
+      <p></p>
 
  
       <button type="submit" className="bg-green-500 text-white px-4 py-2">
