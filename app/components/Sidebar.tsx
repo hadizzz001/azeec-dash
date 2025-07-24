@@ -31,12 +31,12 @@ export default function Sidebar() {
           <ul style={{ padding: 0, marginTop: "20px", listStyle: "none" }}>
             <li style={{ marginBottom: "15px" }}>
               <a href="/dashboard" style={{ color: "white", textDecoration: "none" }}>
-                All Products
+                All Projects
               </a>
             </li>
             <li>
               <a href="/products" style={{ color: "white", textDecoration: "none" }}>
-                Add Product
+                Add Project
               </a>
             </li>
             <li>
@@ -47,6 +47,16 @@ export default function Sidebar() {
             <li>
               <a href="/brand" style={{ color: "white", textDecoration: "none" }}>
                 Add Brand
+              </a>
+            </li>   
+            <li>
+              <a href="/team" style={{ color: "white", textDecoration: "none" }}>
+                Add Team
+              </a>
+            </li>   
+            <li>
+              <a href="/exp" style={{ color: "white", textDecoration: "none" }}>
+                Edit Experience
               </a>
             </li>   
             <li>

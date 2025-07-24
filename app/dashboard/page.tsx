@@ -28,7 +28,7 @@ export default function ProductTable() {
       const data = await response.json();
       setProducts(data);
     } else {
-      console.error('Failed to fetch products');
+      console.error('Failed to fetch Project');
     }
   };
 
@@ -43,16 +43,16 @@ export default function ProductTable() {
   };
 
   const handleDelete = async (id) => {
-    if (confirm('Are you sure you want to delete this product?')) {
+    if (confirm('Are you sure you want to delete this Project?')) {
       try {
         const response = await fetch(`/api/products/${id}`, {
           method: 'DELETE',
         });
         if (response.ok) {
-          alert('Product deleted successfully');
+          alert('Project deleted successfully');
           fetchProducts();
         } else {
-          console.error('Failed to delete product');
+          console.error('Failed to delete Project');
         }
       } catch (error) {
         console.error('Error:', error);
@@ -73,11 +73,11 @@ export default function ProductTable() {
       });
 
       if (response.ok) {
-        alert('Product updated successfully');
+        alert('Project updated successfully');
         setEditingProduct(null);
         fetchProducts();
       } else {
-        console.error('Failed to update product');
+        console.error('Failed to update Project');
       }
     } catch (error) {
       console.error('Error:', error);
@@ -113,7 +113,7 @@ export default function ProductTable() {
           onSave={handleUpdate}
         />
       )}
-      <h1 className="text-2xl font-bold mb-4">Product List</h1>
+      <h1 className="text-2xl font-bold mb-4">Projects List</h1>
 
       {/* Search Input */}
       <div className="mb-4">
@@ -259,7 +259,7 @@ function EditProductForm({ product, onCancel, onSave }) {
 
   return (
     <form onSubmit={handleSubmit} className="text-[12px] border p-4 bg-gray-100 rounded">
-      <h2 className="text-xl font-bold mb-4">Edit Product</h2>
+      <h2 className="text-xl font-bold mb-4">Edit Project</h2>
 
       {/* Title */}
       <div className="mb-4">
@@ -280,7 +280,7 @@ function EditProductForm({ product, onCancel, onSave }) {
       
       {/* Description */}
       <label className="block text-lg font-bold mb-2">Description</label>
-      <ReactQuill value={description} onChange={setDescription} className="mb-4" theme="snow" placeholder="Write your product description here..." />
+      <ReactQuill value={description} onChange={setDescription} className="mb-4" theme="snow" placeholder="Write your Project description here..." />
 
  
       {/* Image Upload */}

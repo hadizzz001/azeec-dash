@@ -67,10 +67,10 @@ export default function AddProduct() {
       });
 
       if (response.ok) {
-        alert('Product added successfully!');
+        alert('Project added successfully!');
         window.location.href = '/dashboard';
       } else {
-        alert('Failed to add product');
+        alert('Failed to add Project');
       }
     } catch (err) {
       console.error('Error submitting form:', err);
@@ -97,7 +97,7 @@ export default function AddProduct() {
 
   return (
     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto p-4">
-      <h1 className="text-xl font-bold mb-4">Add New Product</h1>
+      <h1 className="text-xl font-bold mb-4">Add New Project</h1>
       <input
         type="text"
         placeholder="Title"
@@ -133,7 +133,7 @@ export default function AddProduct() {
         onChange={setDescription}
         className="mb-4"
         theme="snow"
-        placeholder="Write your product description here..."
+        placeholder="Write your Project description here..."
       />
 
       <Upload onFilesUpload={handleImgChange} /> 
@@ -141,7 +141,7 @@ export default function AddProduct() {
 
  
       <button type="submit" className="bg-green-500 text-white px-4 py-2">
-        Save Product
+        Save Project
       </button>
     </form>
   );

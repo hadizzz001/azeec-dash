@@ -8,11 +8,11 @@ datasource db {
 }
 
 model Product {
-  id           String   @id @default(auto()) @map("_id") @db.ObjectId
-  title        String
-  description  String 
-  img          String[]
-  category     String 
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
+  img         String[]
+  category    String
 }
 
 model Category {
@@ -21,8 +21,6 @@ model Category {
   img  String[]
 }
 
- 
-
 model Review {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   name        String
@@ -30,8 +28,22 @@ model Review {
   date        DateTime @default(now()) @db.Date
 }
 
-
 model Brand {
-  id   String   @id @default(auto()) @map("_id") @db.ObjectId 
-  img  String[]
+  id  String   @id @default(auto()) @map("_id") @db.ObjectId
+  img String[]
+}
+
+model Team {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  position    String
+  description String
+  img         String[]
+}
+
+model Exp {
+  id  String @id @default(auto()) @map("_id") @db.ObjectId
+  ex  String
+  pro String
+  gua String
 }
